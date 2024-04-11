@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define HASH_SIZE 10
+#define HASH_SIZE 23
 
 // RecordType
 struct RecordType {
@@ -87,7 +87,7 @@ void displayRecordsInHash(struct HashType *pHashArray, int hashSz) {
         if (current != NULL) {
             printf("Index %d -> ", i);
             while (current != NULL) {
-                printf("%d %c %d -> ", current->data.id, current->data.name, current->data.order);
+                printf("%d, %c, %d -> ", current->data.id, current->data.name, current->data.order);
                 current = current->next;
             }
             printf("\n");
