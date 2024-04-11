@@ -107,13 +107,11 @@ int main(void) {
     for (int i = 0; i < HASH_SIZE; ++i) {
         hashTable.table[i] = NULL;
     }
-
     for (int i = 0; i < recordSz; ++i) {
         insertIntoHash(&hashTable, pRecords[i]);
     }
 
     displayRecordsInHash(&hashTable, HASH_SIZE);
-
     free(pRecords);
 
     return 0;
